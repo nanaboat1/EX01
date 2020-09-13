@@ -1,6 +1,7 @@
-EX01_02/.vscode/tasks.json
-EX01_02/.vscode/launch.json
-EX01_02/.vscode/c_cpp_properties.json
-EX01_02/bin/.gitignore
-EX01_02/bin/main
-EX01_02/bin/main.dSYM/Contents/Info.plist
+tasks.json
+launch.json
+c_cpp_properties.json
+bin 
+main
+Info.plist
+
