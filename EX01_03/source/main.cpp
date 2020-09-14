@@ -29,10 +29,10 @@ bool element_find(std::vector<Type> & search_vector, Type search_element ) {
  * @param b second vector
  * @return the union of the two vectors.
 */
-std::vector<int>& unionVectors(std::vector<int>& a, std::vector<int>& b ) {
+void /**std::vector<int>&*/ unionVectors(std::vector<int>& a, std::vector<int>& b, std::vector<int>& union_vector ) {
 
     // hold the union of the two vectors.
-    std::vector<int> union_vector; 
+    // std::vector<int> union_vector; 
     int max_iterate = 0; // max_iterate for the union.
 
     // Get the size of both vectors
@@ -81,7 +81,7 @@ std::vector<int>& unionVectors(std::vector<int>& a, std::vector<int>& b ) {
     }
     
     // Testing
-    return union_vector;
+    // return union_vector;
 }
 
 
@@ -96,18 +96,14 @@ int main( ) {
     int a_send;
     int b_send; 
 
-
     srand(time(NULL)); // seed random library
 
-    for ( int i=0; i<5; i++) {
-
+    for ( int i=0; i<20; i++) {
         a_send = rand() % 200;
         b_send = rand() % 200;
 
-
         a_testVector.push_back(a_send);
         b_testVector.push_back(b_send);
-
     }
 
    // for ( int i=0; i< 100; i++ ) {
@@ -115,10 +111,10 @@ int main( ) {
     //}
     
     std::vector <int> unionized_vector;
-
     // Error Here --> Discuss in Class.
-    unionized_vector = unionVectors(a_testVector, b_testVector) ;
+    unionVectors(a_testVector, b_testVector, unionized_vector) ; // changed the function to void.
     // Error Here --> Discuss in Class. 
+
 
     for ( int i=0; i< unionized_vector.size(); i++) {
         std::cout << unionized_vector[i] << std::endl;
